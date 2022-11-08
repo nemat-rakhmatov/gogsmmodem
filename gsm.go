@@ -331,7 +331,7 @@ func (self *Modem) init() error {
 	// get SMSC
 	// the modem complains if SMSC hasn't been set, but stores it correctly, so
 	// query for stored value, then send a set from the query response.
-	r, err := self.send("+CSCA=","+998991396700")
+	r, err := self.send("+CSCA","+998991396700")
 	if err != nil {
 		return err
 	}
